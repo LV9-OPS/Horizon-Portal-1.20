@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero docs-hero">
+  <div>
+    <p class="eyebrow">HZN MANAGER ? DOCUMENTATION</p>
+    <h1>Horizon Manager</h1>
+    <p class="hero-lead">The desktop client that brings the Horizon Portal Workshop, Library, downloads, themes and Destiny tools together in one place.</p>
+    <div class="hero-actions">
+      <a class="btn" href="/download">Download HZN Manager</a>
+      <a class="btn btn-secondary" href="/workshop">Open Workshop</a>
+    </div>
+  </div>
+  <div class="hero-aside">
+    <div class="stat-card"><span class="stat-label">Current version</span><strong>V{{ manager_version }}</strong><p>Current documented Horizon Manager release.</p></div>
+    <div class="stat-card"><span class="stat-label">Platform</span><strong>Windows x64</strong><p>Designed for Windows 10 and Windows 11.</p></div>
+    <div class="stat-card"><span class="stat-label">Projects</span><strong>Destiny 2 ? Dawn ? SunRise</strong><p>Manual executable selection keeps installation paths under your control.</p></div>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">01 ? WHAT IS IT?</p>
+    <h2>A launcher and manager, not another mystery executable.</h2>
+  </div>
+  <p class="long-copy">HZN Manager is the Horizon desktop application. It is designed to centralize the tools players need to discover, organize and launch supported Destiny modding projects without having to hunt through folders, links and Discord messages every time.</p>
+  <div class="cards docs-grid-3">
+    <article class="card"><h3>Workshop</h3><p>Browse Horizon projects and their available information before installing or using them.</p></article>
+    <article class="card"><h3>Library</h3><p>Keep local project executables organized and launch the paths you selected yourself.</p></article>
+    <article class="card"><h3>Downloads</h3><p>Access Horizon-managed downloads and keep the launcher as the central entry point.</p></article>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">02 ? FIRST LAUNCH</p>
+    <h2>From Guest to a usable local profile.</h2>
+  </div>
+  <div class="steps docs-steps">
+    <div class="step"><strong>01</strong><p>Install HZN Manager and open it.</p></div>
+    <div class="step"><strong>02</strong><p>Choose your local username during first launch.</p></div>
+    <div class="step"><strong>03</strong><p>The profile starts as Guest and is stored locally.</p></div>
+    <div class="step"><strong>04</strong><p>Redeem an HZN-CODE when you receive BETA or Creator access.</p></div>
+    <div class="step"><strong>05</strong><p>Your unlocked access and themes are reflected in the manager.</p></div>
+  </div>
+  <p class="docs-note">HZN Manager does not require Discord OAuth for this local profile flow. Redeem codes are used to grant BETA or Creator access.</p>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">03 ? LIBRARY</p>
+    <h2>How launching works.</h2>
+  </div>
+  <div class="two-col">
+    <div>
+      <p class="long-copy">The Library is built around explicit local executable selection. HZN Manager does not need to guess where every game or modding environment is installed.</p>
+      <div class="highlight-list">
+        <div class="highlight-item"><span>01</span><p>Select the executable you want to use.</p></div>
+        <div class="highlight-item"><span>02</span><p>HZN Manager stores the selected local path for the installation.</p></div>
+        <div class="highlight-item"><span>03</span><p>Open or launch the selected project directly from the Library.</p></div>
+      </div>
+    </div>
+    <div class="info-card"><h3>Supported targets</h3><p>Destiny 2, Dawn and SunRise are the main project targets of the manager. The launcher is intended to make switching between local installations predictable rather than relying on automatic detection.</p></div>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">04 ? WORKSHOP</p>
+    <h2>Discover projects before touching your files.</h2>
+  </div>
+  <p class="long-copy">The Workshop is the content discovery layer of Horizon Portal. Projects can expose their type, description, compatibility and update information so players can understand what they are opening before installing anything.</p>
+  <div class="cards docs-grid-3">
+    <article class="card"><h3>Weapons</h3><p>Custom weapon projects and related content.</p></article>
+    <article class="card"><h3>Missions & Raids</h3><p>Mission imports, raid content and larger gameplay projects.</p></article>
+    <article class="card"><h3>Utilities</h3><p>HUD changes, tools and other utility projects.</p></article>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">05 ? ACCESS & REDEEM CODES</p>
+    <h2>Guest, BETA and Creator.</h2>
+  </div>
+  <div class="cards docs-grid-3">
+    <article class="card"><h3>Guest</h3><p>The default local profile. Core manager functionality remains available without a special role.</p></article>
+    <article class="card"><h3>BETA</h3><p>A redeem code can grant BETA access and unlock the BETA theme and associated access.</p></article>
+    <article class="card"><h3>Creator</h3><p>Creator access unlocks creator-only areas and the Creator theme. Creator workflows are tied to Horizon Portal moderation and publication.</p></article>
+  </div>
+  <p class="docs-note">Codes use the <strong>HZN-CODE-XXXXXXXX</strong> format. They are redeemed from the manager and associated with the local installation.</p>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">06 ? THEMES</p>
+    <h2>Change the interface without changing the workflow.</h2>
+  </div>
+  <p class="long-copy">HZN Manager includes a theme system with Horizon and Destiny-inspired visual directions. Standard themes include Destiny 2, Destiny 1, Hive, Cabal, Fallen, Corrupted and Aria. The Vex theme is reserved for Creator access, while the BETA theme is reserved for BETA access.</p>
+  <div class="chip-row"><span class="chip">Destiny 2</span><span class="chip">Destiny 1</span><span class="chip">Hive</span><span class="chip">Cabal</span><span class="chip">Fallen</span><span class="chip">Corrupted</span><span class="chip">Aria</span><span class="chip">Vex ? Creator</span><span class="chip">BETA ? BETA access</span></div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">07 ? TOOLS</p>
+    <h2>Useful Destiny services, one click away.</h2>
+  </div>
+  <p class="long-copy">The Tools section provides quick access to external Destiny utilities. HZN Manager opens these services externally rather than trying to recreate them inside the launcher.</p>
+  <div class="cards docs-grid-3">
+    <article class="card"><h3>Destiny Item Manager</h3><p>Inventory and item management.</p></article>
+    <article class="card"><h3>RaidHub</h3><p>Raid and community information.</p></article>
+    <article class="card"><h3>Bray.tech</h3><p>Destiny data and account utilities.</p></article>
+    <article class="card"><h3>light.gg</h3><p>Item database and perk information.</p></article>
+    <article class="card"><h3>D2 Armor Picker</h3><p>Armor build and stat planning.</p></article>
+    <article class="card"><h3>Today in Destiny / Bungie.net</h3><p>Daily Destiny information and official Bungie services.</p></article>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">08 ? CREATOR WORKFLOW</p>
+    <h2>From project idea to Workshop.</h2>
+  </div>
+  <div class="steps docs-steps">
+    <div class="step"><strong>01</strong><p>Create or prepare your Destiny project.</p></div>
+    <div class="step"><strong>02</strong><p>Use the Creator area when your account has Creator access.</p></div>
+    <div class="step"><strong>03</strong><p>Submit project information for review.</p></div>
+    <div class="step"><strong>04</strong><p>Moderation checks the project before publication.</p></div>
+    <div class="step"><strong>05</strong><p>Approved projects can be presented through the Workshop.</p></div>
+  </div>
+  <p class="docs-note">Creator access is not a bypass around moderation. The point is to make publication structured, because apparently asking people to put their files in random Discord channels was not a sustainable software architecture.</p>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">09 ? TECHNICAL MODEL</p>
+    <h2>What happens behind the interface.</h2>
+  </div>
+  <div class="two-col">
+    <div class="highlight-list">
+      <div class="highlight-item"><span>LOCAL</span><p>Your username, selected installation paths and local profile data are kept on the machine.</p></div>
+      <div class="highlight-item"><span>API</span><p>When a valid installation credential exists, the manager can synchronize access state with the Horizon API.</p></div>
+      <div class="highlight-item"><span>WEB</span><p>The Horizon Portal website provides the Workshop, account services, downloads and creator infrastructure.</p></div>
+      <div class="highlight-item"><span>TAURI</span><p>The desktop client is built with Tauri 2 and a web-based interface packaged as a Windows application.</p></div>
+    </div>
+    <div class="info-card"><h3>Offline-friendly behavior</h3><p>If the Horizon API is unavailable, the manager can remain usable in Guest mode. Network-dependent access synchronization and redeem operations require the API to be reachable.</p></div>
+  </div>
+</section>
+
+<section class="panel docs-section">
+  <div class="section-head">
+    <p class="section-kicker">10 ? TROUBLESHOOTING</p>
+    <h2>When the computer decides to become philosophical.</h2>
+  </div>
+  <div class="cards docs-grid-3">
+    <article class="card"><h3>Project does not launch</h3><p>Open Library and verify that the selected executable is the correct file for the project you want to launch.</p></article>
+    <article class="card"><h3>Access did not update</h3><p>Check that the redeem code was accepted and that the manager can reach the Horizon API. Refreshing the manager can resynchronize local entitlement state.</p></article>
+    <article class="card"><h3>Theme is locked</h3><p>Creator and BETA themes are access-controlled. A normal Guest profile will not unlock them by merely clicking harder.</p></article>
+  </div>
+</section>
+
+<section class="panel docs-section docs-final">
+  <p class="eyebrow">HORIZON PORTAL</p>
+  <h2>One manager. One Workshop. Fewer folders named FINAL_FINAL_2.</h2>
+  <p class="long-copy">This documentation describes the current HZN Manager V{{ manager_version }} workflow. Features may evolve as Horizon Portal moves toward V1.0.0.</p>
+</section>
+{% endblock %}

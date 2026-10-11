@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+
+  <title>
+    {{ site_name }}{% if request.url.path != '/' %} · {{ t(request.url.path.strip('/').replace('-', ' ')) }}{% endif %}
+  </title>
+
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='img/favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', path='img/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='Index.css') }}">
+
+  <script defer src="{{ url_for('static', path='js/network.js') }}"></script>
+  <script defer src="{{ url_for('static', path='js/gold.js') }}"></script>
+  <script defer src="{{ url_for('static', path='js/language.js') }}"></script>
+</head>
+
+<body>
+
+  <div id="language-gate" class="language-gate" hidden>
+    <div class="language-card" role="dialog" aria-modal="true" aria-labelledby="language-title">
+      <p class="eyebrow">HORIZON PORTAL</p>
+      <h2 id="language-title">Choose your language</h2>
+      <p id="language-copy">Select your language for this session.</p>
+      <div class="language-choice-row">
+        <button class="btn language-choice" data-language="fr">Français</button>
+        <button class="btn btn-secondary language-choice" data-language="en">English</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+
+    <!-- Brand -->
+    <a class="brand" href="/" aria-label="Horizon Portal home">
+      <img class="brand-logo" src="{{ url_for('static', path='img/HorizonPortal.png') }}" alt="Horizon Portal">
+      <span>Horizon Portal</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Main navigation">
+      {% for label, href in nav %}
+        <a
+          class="nav-link{% if request.url.path == href %} active{% endif %}"
+          href="{{ href }}"
+        >
+          {{ t(label) }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Authentication -->
+    <div class="top-actions">
+
+      {% if user %}
+
+        <!-- Logged in -->
+        <span class="top-link user-name">
+          {{ user.username }}
+        </span>
+
+        <form
+          method="post"
+          action="/logout"
+          style="display: inline;"
+        >
+          <button
+            class="top-link top-link-accent"
+            type="submit"
+          >
+            Logout
+          </button>
+        </form>
+
+      {% endif %}
+
+    </div>
+
+  </header>
+
+  <main class="shell">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+
+    <a
+      class="footer-discord gold-shimmer"
+      href="https://discord.gg/A4XxcQQzG5"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Discord
+    </a>
+
+    <a href="/themes">
+      Themes
+    </a>
+
+    <a href="/settings">
+      {{ t('settings') }}
+    </a>
+
+    <a href="/docs">
+      Documentation
+    </a>
+
+  </footer>
+
+</body>
+</html>

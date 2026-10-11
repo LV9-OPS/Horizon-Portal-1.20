@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Account</p>
+    <h1>{{ t('account_title') }}</h1>
+    <p class="hero-lead">{{ t('account_intro') }}</p>
+    <div class="hero-actions">
+      <a class="btn gold-shimmer" href="/api/auth/discord/start?mode=web">Reconnecter Discord</a>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="section-head">
+    <p class="section-kicker">PROFILE</p>
+    <h2>Account tools</h2>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <h3>Discord</h3>
+      <p>Votre identité Discord est utilisée pour la connexion et les droits Horizon.</p>
+    </article>
+    <article class="card">
+      <h3>{{ t('inbox') }}</h3>
+      <p>Messages between users and creators will live here.</p>
+    </article>
+    <article class="card">
+      <h3>Language</h3>
+      <form method="post" action="/set-language" class="btn-row">
+        <button class="btn" name="language" value="en">English</button>
+        <button class="btn btn-secondary" name="language" value="fr">Français</button>
+      </form>
+    </article>
+  </div>
+</section>
+{% endblock %}

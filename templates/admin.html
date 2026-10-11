@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero admin-hero">
+  <div>
+    <p class="eyebrow">HORIZON PORTAL · RESTRICTED</p>
+    <h1>Admin console</h1>
+    <p class="hero-lead">Generate single-use access codes for BETA, Creator, and First Light.</p>
+  </div>
+  <aside class="admin-security-card">
+    <strong>Protected session</strong>
+    <span>Signed in as {{ user.username }}</span>
+    <span>Codes are shown once and never stored in plain text.</span>
+  </aside>
+</section>
+
+<section class="panel admin-code-panel">
+  <div class="section-head">
+    <p class="section-kicker">ACCESS MANAGEMENT</p>
+    <h2>Generate redeem codes</h2>
+    <p class="muted">Each code can be redeemed once. Copy and store generated codes before leaving this page.</p>
+  </div>
+
+  <form id="admin-code-form" class="admin-code-form">
+    <div class="form-field">
+      <label for="admin-entitlement">Access type</label>
+      <select id="admin-entitlement" name="entitlement" required>
+        <option value="beta">BETA</option>
+        <option value="creator">Creator</option>
+        <option value="first">First Light (Opulence)</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="admin-code-count">Number of codes</label>
+      <input id="admin-code-count" name="count" type="number" min="1" max="100" value="1" required>
+    </div>
+    <button id="admin-generate-button" class="btn gold-shimmer" type="submit">Generate codes</button>
+  </form>
+
+  <div id="admin-code-result" class="admin-code-result" hidden aria-live="polite">
+    <div class="admin-result-head">
+      <div><strong>New codes</strong><p>They will not be displayed again after you leave this page.</p></div>
+      <button id="admin-copy-codes" class="btn btn-secondary" type="button">Copy all</button>
+    </div>
+    <pre id="admin-code-list"></pre>
+  </div>
+  <p id="admin-code-error" class="admin-error" role="alert" hidden></p>
+</section>
+<script defer src="{{ url_for('static', path='js/admin.js') }}"></script>
+{% endblock %}

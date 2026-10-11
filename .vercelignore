@@ -1,0 +1,14 @@
+﻿.git
+launcher
+horizon.db
+storage
+*.db
+*.sqlite
+*.sqlite3
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+venv
+node_modules
+*.log
